@@ -1,0 +1,1 @@
+Second entry in the famous "The Adventure Of Smiler" series, this game includes more than 2000 hours of content and has some of the best directors (like Shigeru Miamoto and Hidetaka Miyazaki) and some of the best art directors (like Akira Toriyama and even Van Gogh!)
