@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4gli58p1o4iw"]
+
+[ext_resource type="Texture2D" uid="uid://bwpe6udy5ycy3" path="res://Art/sprites/SageSheet.png" id="1_glpr6"]
+[ext_resource type="Script" uid="uid://cbc16qlipb4bo" path="res://Entities/Player/player.gd" id="2_pjt0s"]
+
+[node name="Character" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(599, 329)
+texture = ExtResource("1_glpr6")
+hframes = 4
+vframes = 3
+frame = 3
+script = ExtResource("2_pjt0s")
+
+[node name="PlayerAnimation" type="AnimationPlayer" parent="."]
+speed_scale = 0.538

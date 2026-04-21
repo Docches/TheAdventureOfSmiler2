@@ -1,0 +1,111 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1vddjjqlgre2"]
+
+[ext_resource type="Script" uid="uid://p2wk6sunmnb4" path="res://GUI/Settings/Controls/controls.gd" id="1_pb7on"]
+
+[node name="Controls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pb7on")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="move_upContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="move_upText" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/move_upContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "@control_walk_up@"
+
+[node name="move_upButton" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/move_upContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "@control_rebind@"
+metadata/action = "move_up"
+
+[node name="move_leftContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="move_leftText" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/move_leftContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "@control_walk_left@"
+
+[node name="move_leftButton" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/move_leftContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "@control_rebind@"
+metadata/action = "move_left"
+
+[node name="move_downContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="move_downText" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/move_downContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "@control_walk_down@"
+
+[node name="move_downButton" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/move_downContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "@control_rebind@"
+metadata/action = "move_down"
+
+[node name="move_rightContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="move_rightText" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/move_rightContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "@control_walk_right@"
+
+[node name="move_rightButton" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/move_rightContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+text = "@control_rebind@"
+metadata/action = "move_right"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+text = "@menu_back@"
