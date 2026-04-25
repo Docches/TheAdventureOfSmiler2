@@ -8,11 +8,15 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="The Adventure of Smiler 2"
 run/main_scene="uid://u0ih450ub7qn"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
@@ -53,3 +57,8 @@ move_down={
 [internationalization]
 
 locale/translations=PackedStringArray("res://Localization/Translations.en.translation", "res://Localization/Translations.it.translation", "res://Localization/Translations.ja.translation", "res://Localization/Translations.zh.translation")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

@@ -47,7 +47,7 @@ func load_settings():
 	
 	if err == OK:
 		# load language
-		current_language = config.get_value("settings", "language", "")
+		current_language = config.get_value("settings", "language", "en")
 		if current_language in GlobalVar.supported_languages:
 			LanguageManager.set_language(current_language)
 		else:
@@ -83,9 +83,6 @@ func load_settings():
 			
 			InputMap.action_erase_events(action)
 			InputMap.action_add_event(action, event)
-	else:
-		var system_lang = OS.get_locale().split("_")[0]
-		LanguageManager.set_language(system_lang)
 
 func save_settings():
 	var config = ConfigFile.new()
