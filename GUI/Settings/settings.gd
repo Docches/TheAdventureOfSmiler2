@@ -3,7 +3,7 @@ extends Node
 func _ready():
 	# back button signal connect
 	var back_button = find_child("Back")
-	back_button.pressed.connect(GlobalNav._on_pressed.bind("res://GUI/Main/Main.tscn"))
+	back_button.pressed.connect(GlobalNav.change_to_scene.bind("res://GUI/Main/Main.tscn"))
 	
 	# language option button selection handling
 	var language_button = find_child("LanguageButton")
@@ -51,7 +51,7 @@ func _ready():
 	
 	# controls edit button handling
 	var controls_button = find_child("ControlsButton")
-	controls_button.pressed.connect(GlobalNav._on_pressed.bind("res://GUI/Settings/Controls/Controls.tscn"))
+	controls_button.pressed.connect(GlobalNav.change_to_scene.bind("res://GUI/Settings/Controls/Controls.tscn"))
 
 func _on_language_selected(index):
 	LanguageManager.set_language(GlobalVar.supported_languages[index])

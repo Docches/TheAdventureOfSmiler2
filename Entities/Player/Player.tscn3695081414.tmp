@@ -113,14 +113,13 @@ size = Vector2(65, 80)
 [node name="Player" type="CharacterBody2D" unique_id=1539458527]
 script = ExtResource("1_ww0jn")
 
-[node name="Sprite" type="Sprite2D" parent="." unique_id=378807817]
-scale = Vector2(0.5, 0.5)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=378807817]
 texture = ExtResource("2_ww0jn")
 hframes = 4
 vframes = 3
 frame = 3
 
-[node name="PlayerAnimation" type="AnimationPlayer" parent="Sprite" unique_id=1602727981]
+[node name="PlayerAnimation" type="AnimationPlayer" parent="Sprite2D" unique_id=1602727981]
 libraries/ = SubResource("AnimationLibrary_ww0jn")
 speed_scale = 0.538
 

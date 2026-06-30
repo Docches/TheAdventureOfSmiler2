@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://65yxvamvejsl"]
+
+[ext_resource type="Script" uid="uid://b8povcc5wdoeq" path="res://Entities/CombatTrigger/combat_trigger.gd" id="1_1j2ip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwk8r"]
+
+[node name="CombatTrigger" type="Area2D" unique_id=820557194]
+script = ExtResource("1_1j2ip")
+
+[node name="debug_area_cast" type="ColorRect" parent="." unique_id=231376594]
+visible = false
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.8303863, 0, 0.094419144, 0.19607843)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2138742880]
+shape = SubResource("RectangleShape2D_iwk8r")

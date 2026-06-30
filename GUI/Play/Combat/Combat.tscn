@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bkayw0015ad5v"]
+
+[ext_resource type="Script" uid="uid://br35ygf26oqko" path="res://GUI/Play/Combat/combat.gd" id="1_g8nxj"]
+
+[node name="Combat" type="Control" unique_id=101401891]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g8nxj")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=834969054]
+
+[node name="LanesContainer" type="HBoxContainer" parent="." unique_id=252143192]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lane0" type="Control" parent="LanesContainer" unique_id=67803893]
+layout_mode = 2
+
+[node name="Lane1" type="Control" parent="LanesContainer" unique_id=1833502581]
+layout_mode = 2
+
+[node name="Lane2" type="Control" parent="LanesContainer" unique_id=554039237]
+layout_mode = 2
+
+[node name="Lane3" type="Control" parent="LanesContainer" unique_id=1249194665]
+layout_mode = 2
+
+[node name="Lane4" type="Control" parent="LanesContainer" unique_id=975305905]
+layout_mode = 2

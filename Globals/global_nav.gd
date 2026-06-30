@@ -13,6 +13,6 @@ func _input(event):
 		exit()
 
 # Change to the scene with the corresponding name
-func _on_pressed(scene_path: String):
+func change_to_scene(scene_path: String):
 	GlobalVar.last_scene_path = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file(scene_path)

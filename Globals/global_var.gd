@@ -13,6 +13,8 @@ var last_scene_path : String = ""
 
 	# system variables
 var using_save : int = -1
+var debug_mode : bool = true
+var player
 
 	# setting variables
 var current_language : String = "en"
@@ -22,13 +24,15 @@ var sound_volume : int = 100
 var auto_save : bool = true
 var auto_pause : bool = false
 
+var beat_note_spawn_time : float = 2
+
 	# statistics variables
 var total_play_time : float = 0
 
 	# data variables
 var save_play_time : float = 0
 var current_play_time : float = 0
-var current_map : String = ""
+var current_map : String = "res://Map/Village/Village.tscn"
 var player_position_x : float = 0
 var player_position_y : float = 0
 

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://d4gjg4t28lixv"]
+
+[ext_resource type="Script" uid="uid://e32a7a0q88w8" path="res://GUI/Play/Dialogue_box/dialogue_box.gd" id="1_n6mhv"]
+
+[node name="DialogueBox" type="CanvasLayer" unique_id=746453243]
+visible = false
+script = ExtResource("1_n6mhv")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1200451237]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 480
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=781328523]
+layout_mode = 2
+color = Color(0.57264715, 0.452268, 0.3364359, 0.28235295)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1429212186]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer" unique_id=28619565]
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_vertical = 1
+autowrap_mode = 3
+
+[node name="Next" type="Button" parent="MarginContainer" unique_id=1389161913]
+layout_mode = 2
+theme_type_variation = &"FlatButton"

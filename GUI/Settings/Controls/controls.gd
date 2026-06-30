@@ -5,7 +5,7 @@ var action_to_rebind = ""
 
 func _ready():
 	var back_button = find_child("Back")
-	back_button.pressed.connect(GlobalNav._on_pressed.bind("res://GUI/Settings/Settings.tscn"))
+	back_button.pressed.connect(GlobalNav.change_to_scene.bind("res://GUI/Settings/Settings.tscn"))
 	
 	# current binded keyname display
 	var container = $MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer

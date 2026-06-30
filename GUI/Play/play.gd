@@ -2,7 +2,7 @@ extends Control
 
 func _ready():
 	var back_button = find_child("Back")
-	back_button.pressed.connect(GlobalNav._on_pressed.bind("res://GUI/Main/Main.tscn"))
+	back_button.pressed.connect(GlobalNav.change_to_scene.bind("res://GUI/Main/Main.tscn"))
 	
 	for i in range(1, 7):
 		var save_button = find_child("Save" + str(i) + "Button")
@@ -19,4 +19,4 @@ func _ready():
 
 func load_save(save_number: int):
 	GlobalVar.load_data(save_number)
-	GlobalNav._on_pressed("res://Entities/Player/player.tscn")
+	GlobalNav.change_to_scene(GlobalVar.current_map)

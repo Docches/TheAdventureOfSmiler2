@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dcmq7la3vgf3b"]
+
+[ext_resource type="Script" uid="uid://8r30ayi0fai8" path="res://Entities/DialogueTrigger/dialogue_trigger.gd" id="1_hp7rd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hp7rd"]
+
+[node name="DialogueTrigger" type="Area2D" unique_id=1239953458]
+script = ExtResource("1_hp7rd")
+
+[node name="debug_area_cast" type="ColorRect" parent="." unique_id=101822032]
+visible = false
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.16078432, 0.34901962, 1, 0.19607843)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1378306949]
+shape = SubResource("RectangleShape2D_hp7rd")
