@@ -16,6 +16,13 @@ var using_save : int = -1
 var debug_mode : bool = true
 var player
 
+const PERFECT_WINDOW := 0.035
+const GOOD_WINDOW := 0.075
+const BAD_WINDOW := 0.120
+
+var SPAWN_Y := -120.0
+var HIT_Y := 300.0
+
 	# setting variables
 var current_language : String = "en"
 var fps_cap : int = 60
@@ -24,7 +31,7 @@ var sound_volume : int = 100
 var auto_save : bool = true
 var auto_pause : bool = false
 
-var beat_note_spawn_time : float = 2
+var note_spawn_time : float = 2
 
 	# statistics variables
 var total_play_time : float = 0
@@ -32,7 +39,7 @@ var total_play_time : float = 0
 	# data variables
 var save_play_time : float = 0
 var current_play_time : float = 0
-var current_map : String = "res://Map/Village/Village.tscn"
+var current_map : String = "res://Maps/Village/Village.tscn"
 var player_position_x : float = 0
 var player_position_y : float = 0
 

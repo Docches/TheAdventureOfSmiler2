@@ -11,9 +11,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g8nxj")
 
+[node name="Button" type="Button" parent="." unique_id=265198880]
+layout_mode = 0
+offset_right = 45.0
+offset_bottom = 31.0
+text = "start"
+
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=834969054]
 
 [node name="LanesContainer" type="HBoxContainer" parent="." unique_id=252143192]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,17 +28,46 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Lane0" type="Control" parent="LanesContainer" unique_id=67803893]
+[node name="Lane0" type="ColorRect" parent="LanesContainer" unique_id=492686080]
 layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.1254902)
 
-[node name="Lane1" type="Control" parent="LanesContainer" unique_id=1833502581]
+[node name="Lane1" type="ColorRect" parent="LanesContainer" unique_id=605289971]
 layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.7058824, 0.7058824, 0.7058824, 0.1254902)
 
-[node name="Lane2" type="Control" parent="LanesContainer" unique_id=554039237]
+[node name="Lane2" type="ColorRect" parent="LanesContainer" unique_id=756902693]
 layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.1254902)
 
-[node name="Lane3" type="Control" parent="LanesContainer" unique_id=1249194665]
+[node name="Lane3" type="ColorRect" parent="LanesContainer" unique_id=1093732362]
 layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.7058824, 0.7058824, 0.7058824, 0.1254902)
 
-[node name="Lane4" type="Control" parent="LanesContainer" unique_id=975305905]
+[node name="Lane4" type="ColorRect" parent="LanesContainer" unique_id=2017088142]
 layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.1254902)
+
+[node name="Notes" type="Control" parent="." unique_id=539549417]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hitline" type="ColorRect" parent="." unique_id=762958517]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.83300006
+anchor_right = 1.0
+anchor_bottom = 0.84700006
+offset_top = 0.1199646
+offset_bottom = 0.07998657

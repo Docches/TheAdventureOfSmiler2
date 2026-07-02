@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bgfxf7dkh3mon"]
+
+[ext_resource type="PackedScene" uid="uid://d4gjg4t28lixv" path="res://GUI/Play/Dialogue_box/Dialogue_box.tscn" id="1_2bse7"]
+[ext_resource type="PackedScene" uid="uid://dcmq7la3vgf3b" path="res://Entities/DialogueTrigger/dialogueTrigger.tscn" id="1_w3a8e"]
+[ext_resource type="PackedScene" uid="uid://cyj1l5uo24qfv" path="res://Entities/Player/Player.tscn" id="3_w3a8e"]
+[ext_resource type="PackedScene" uid="uid://65yxvamvejsl" path="res://Entities/CombatTrigger/combatTrigger.tscn" id="4_l0ydk"]
+
+[node name="Village" type="Node2D" unique_id=1792439149]
+
+[node name="DialogueTrigger" parent="." unique_id=1239953458 instance=ExtResource("1_w3a8e")]
+position = Vector2(400, 200)
+scale = Vector2(10, 10)
+
+[node name="DialogueTrigger2" parent="." unique_id=883389161 instance=ExtResource("1_w3a8e")]
+position = Vector2(168.00002, 201)
+scale = Vector2(10, 10)
+trigger_type = "byInteract"
+
+[node name="CombatTrigger" parent="." unique_id=820557194 instance=ExtResource("4_l0ydk")]
+position = Vector2(644.00006, 157)
+scale = Vector2(5, 5)
+
+[node name="DialogueBox" parent="." unique_id=506791913 instance=ExtResource("1_2bse7")]
+
+[node name="Player" parent="." unique_id=1539458527 instance=ExtResource("3_w3a8e")]
