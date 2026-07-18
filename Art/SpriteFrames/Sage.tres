@@ -1,0 +1,40 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dtqv0ky44784w"]
+
+[ext_resource type="Texture2D" uid="uid://bwpe6udy5ycy3" path="res://Art/sprites/SageSheet.png" id="1_tk0uv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2migq"]
+atlas = ExtResource("1_tk0uv")
+region = Rect2(0, 1, 160, 158)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v88xk"]
+atlas = ExtResource("1_tk0uv")
+region = Rect2(0, 161, 160, 158)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51i7w"]
+atlas = ExtResource("1_tk0uv")
+region = Rect2(0, 321, 160, 158)
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2migq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v88xk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2migq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51i7w")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

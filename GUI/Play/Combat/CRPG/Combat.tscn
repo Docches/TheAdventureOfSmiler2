@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://but7vi4i27irb"]
+
+[ext_resource type="Script" uid="uid://d0hllmn8dus6j" path="res://GUI/Play/Combat/CRPG/combat.gd" id="1_bekah"]
+[ext_resource type="PackedScene" uid="uid://d4gjg4t28lixv" path="res://GUI/Play/Dialogue_box/Dialogue_box.tscn" id="2_pmxpa"]
+
+[node name="Combat" type="Control" unique_id=1120829566]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bekah")
+
+[node name="CombatSceneContainer" type="Control" parent="." unique_id=2048989291]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FoesContainer" type="Control" parent="CombatSceneContainer" unique_id=1148692328]
+layout_mode = 1
+anchor_left = 0.3
+anchor_top = 0.2
+anchor_right = 0.7
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Foe1Container" type="Control" parent="CombatSceneContainer/FoesContainer" unique_id=482202226]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Foe1" type="AnimatedSprite2D" parent="CombatSceneContainer/FoesContainer/Foe1Container" unique_id=5666063]
+
+[node name="Foe2Container" type="Control" parent="CombatSceneContainer/FoesContainer" unique_id=1512581005]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Foe2" type="AnimatedSprite2D" parent="CombatSceneContainer/FoesContainer/Foe2Container" unique_id=917198462]
+
+[node name="Foe3Container" type="Control" parent="CombatSceneContainer/FoesContainer" unique_id=922707921]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Foe3" type="AnimatedSprite2D" parent="CombatSceneContainer/FoesContainer/Foe3Container" unique_id=1245609792]
+
+[node name="CombatActionsContainer" type="Control" parent="." unique_id=552996707]
+layout_mode = 1
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CombatActionsContainer" unique_id=991406353]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Option1Container" type="MarginContainer" parent="CombatActionsContainer/HBoxContainer" unique_id=2035796209]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="AttackButton" type="Button" parent="CombatActionsContainer/HBoxContainer/Option1Container" unique_id=42219933]
+layout_mode = 2
+text = "@combat_attack@"
+
+[node name="Option2Container" type="MarginContainer" parent="CombatActionsContainer/HBoxContainer" unique_id=1773406230]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="SpellsButton" type="Button" parent="CombatActionsContainer/HBoxContainer/Option2Container" unique_id=119131341]
+layout_mode = 2
+text = "@combat_spells@"
+
+[node name="Option3Container" type="MarginContainer" parent="CombatActionsContainer/HBoxContainer" unique_id=501316274]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="ItemsButton" type="Button" parent="CombatActionsContainer/HBoxContainer/Option3Container" unique_id=1594087834]
+layout_mode = 2
+text = "@combat_items@"
+
+[node name="Option4Container" type="MarginContainer" parent="CombatActionsContainer/HBoxContainer" unique_id=1402311428]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="RunButton" type="Button" parent="CombatActionsContainer/HBoxContainer/Option4Container" unique_id=1069173592]
+layout_mode = 2
+text = "@combat_run@"
+
+[node name="DialogueBox" parent="." unique_id=746453243 instance=ExtResource("2_pmxpa")]

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Beatmap" format=3 uid="uid://nkqrbshrqrr4"]
+
+[ext_resource type="AudioStream" uid="uid://8rnivw56eklt" path="res://Sounds/SFX/thunder.wav" id="1_hi5d0"]
+[ext_resource type="Script" uid="uid://bq3o55fdbli4y" path="res://Entities/VSRG/Beatmap/Note.gd" id="2_6dbeb"]
+[ext_resource type="Script" uid="uid://chn6dyrf2oegw" path="res://Entities/VSRG/Beatmap/Beatmap.gd" id="3_uq3jr"]
+
+[sub_resource type="Resource" id="Resource_v60jw"]
+script = ExtResource("2_6dbeb")
+time = 2.0
+metadata/_custom_type_script = "uid://bq3o55fdbli4y"
+
+[sub_resource type="Resource" id="Resource_a03vc"]
+script = ExtResource("2_6dbeb")
+time = 4.0
+lane = 3
+metadata/_custom_type_script = "uid://bq3o55fdbli4y"
+
+[resource]
+script = ExtResource("3_uq3jr")
+SFX = ExtResource("1_hi5d0")
+lane_number = 4
+notes = Array[ExtResource("2_6dbeb")]([SubResource("Resource_v60jw"), SubResource("Resource_a03vc")])
+metadata/_custom_type_script = "uid://chn6dyrf2oegw"
