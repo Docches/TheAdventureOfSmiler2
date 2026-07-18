@@ -14,10 +14,16 @@ keys,en,it,zh,ja
 @menu_controls@,Controls,Controlli,键位,键位
 @menu_edit@,Edit,Modifica,修改,修改
 @menu_back@,Back,Indietro,返回,返回
+@combat_attack@,Attack,Attacchi,攻击,攻击
+@combat_spells@,Spells,Magie,魔法,魔法
+@combat_items@,Items,Oggetti,物品,物品
+@combat_run@,Run,Scapa,逃跑,逃跑
 @control_walk_left@,Left,Sinistra,左,左
 @control_walk_up@,Up,Su,上,上
 @control_walk_right@,Right,Destra,右,右
 @control_walk_down@,Down,Giù,下,下
 @control_press_key@,Waiting for key,Premi un tasto,选择按键,选择按键
+@description_sage@,"The shortest mage in the history, he was once Smiler's tutor, now he's just a random vagrant.","Il mago più basso della storia, un tempo fu il maestro di Smiler, ora è solo un senza tetto qualunque",史上最矮的法师，曾是斯麦勒的导师，如今只是个流浪者,史上最矮的法师，曾是斯麦勒的导师，如今只是个流浪者
+,,,,
 @dialogue_debug_1@,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
 @dialogue_debug_2@,"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."

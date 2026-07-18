@@ -16,7 +16,7 @@ theme_override_constants/margin_top = 480
 
 [node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=781328523]
 layout_mode = 2
-color = Color(0.57264715, 0.452268, 0.3364359, 0.28235295)
+color = Color(0.47498375, 0.36694545, 0.2669435, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1429212186]
 layout_mode = 2

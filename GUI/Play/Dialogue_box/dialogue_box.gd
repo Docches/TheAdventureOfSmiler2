@@ -26,7 +26,8 @@ func _on_dialogue_triggered(id: String, n: int, t: int):
 func _next_phrase():
 	if phrase == total:
 		self.visible = false
-		GlobalVar.player.dialogue_end()
+		if GlobalVar.player:
+			GlobalVar.player.dialogue_end()
 	else:
 		phrase+=1
 		dialogue_text.text = format_placeholder(dialogue, phrase)

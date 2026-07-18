@@ -9,6 +9,19 @@ var saves = ["user://save_1.cfg", "user://save_2.cfg", "user://save_3.cfg",
 # global variables
 const supported_languages = ["en", "it", "zh", "ja"]
 const supported_fps_caps = [30, 60, 90, 120, 0]
+var rebindable_actions = [
+	"move_left",
+	"move_right",
+	"move_up",
+	"move_down",
+	"interact_dialogue",
+	"interact_combat",
+	"lane_0",
+	"lane_1",
+	"lane_2",
+	"lane_3",
+	"lane_4"
+]
 var last_scene_path : String = ""
 
 	# system variables
@@ -40,6 +53,7 @@ var total_play_time : float = 0
 var save_play_time : float = 0
 var current_play_time : float = 0
 var current_map : String = "res://Maps/Village/Village.tscn"
+var current_combat: String = ""
 var player_position_x : float = 0
 var player_position_y : float = 0
 
@@ -86,14 +100,14 @@ func load_settings():
 		auto_pause = config.get_value("settings", "auto_pause", false)
 		
 		# load keybidings
-		for action in config.get_section_keys("input"):
-			var key_string = config.get_value("input", action)
-			
-			var event = InputEventKey.new()
-			event.keycode = OS.find_keycode_from_string(key_string)
-			
-			InputMap.action_erase_events(action)
-			InputMap.action_add_event(action, event)
+		for action in rebindable_actions:
+			if config.has_section_key("input", action):
+				var physical_keycode = config.get_value("input", action)
+				var event = InputEventKey.new()
+				event.physical_keycode = physical_keycode
+				
+				InputMap.action_erase_events(action)
+				InputMap.action_add_event(action, event)
 
 func save_settings():
 	var config = ConfigFile.new()
@@ -105,10 +119,11 @@ func save_settings():
 	config.set_value("settings", "auto_save", auto_save)
 	config.set_value("settings", "auto_pause", auto_pause)
 	
-	for action in InputMap.get_actions():
-		var events = InputMap.action_get_events(action)
-		if events.size() > 0:
-			config.set_value("input", action, events[0].as_text())
+	for action in rebindable_actions:
+		for event in InputMap.action_get_events(action):
+			if event is InputEventKey:
+				config.set_value("input", action, event.physical_keycode)
+				break
 	
 	config.save(setting_file)
 

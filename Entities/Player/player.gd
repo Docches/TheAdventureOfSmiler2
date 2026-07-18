@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var animation_player = $Sprite/PlayerAnimation
 
 var movement_enabled = true
-var speed = 10
+var speed = 300
 
 func _ready():
 	add_to_group("player")
@@ -17,9 +17,8 @@ func _physics_process(delta: float) -> void:
 	if movement_enabled:
 		var direzioneO = Input.get_axis("move_left", "move_right")
 		var direzioneV = Input.get_axis("move_up", "move_down")
-		
-		position.x += direzioneO * speed
-		position.y += direzioneV * speed
+		velocity = Vector2(direzioneO, direzioneV) * speed
+		move_and_slide()
 		
 		GlobalVar.player_position_x = position.x
 		GlobalVar.player_position_y = position.y

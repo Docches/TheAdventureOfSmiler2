@@ -18,6 +18,10 @@ config/name="The Adventure of Smiler 2"
 run/main_scene="uid://u0ih450ub7qn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[audio]
+
+buses/default_bus_layout="uid://bogv86gamkx3g"
+
 [autoload]
 
 GlobalNav="*res://Globals/global_nav.gd"

@@ -20,10 +20,41 @@ func start_rebinding(button, action_name):
 	button.text = "@control_press_key@"
 	waiting_for_input = true
 	action_to_rebind = action_name
+
+func is_valid_rebind_key(event: InputEventKey) -> bool:
+	# Block Escape
+	if event.keycode == KEY_ESCAPE:
+		return false
 	
+	# Block function keys
+	if event.keycode >= KEY_F1 and event.keycode <= KEY_F12:
+		return false
+	
+	# Block system keys
+	match event.keycode:
+		KEY_PRINT:
+			return false
+		KEY_SCROLLLOCK:
+			return false
+		KEY_PAUSE:
+			return false
+	
+	# Ignore keys without a physical key
+	if event.physical_keycode == 0:
+		return false
+	
+	return true
+
+
 func _input(event):
 	if waiting_for_input and event is InputEventKey and event.pressed:
-		rebind_action(action_to_rebind, event)
+		if not is_valid_rebind_key(event):
+			return
+		
+		var physical_event = InputEventKey.new()
+		physical_event.physical_keycode = event.physical_keycode
+		
+		rebind_action(action_to_rebind, physical_event)
 		waiting_for_input = false
 
 func rebind_action(action_name, event):
