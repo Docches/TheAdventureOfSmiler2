@@ -108,13 +108,14 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e5kic"]
-size = Vector2(65, 80)
+size = Vector2(56, 60)
 
 [node name="Player" type="CharacterBody2D" unique_id=1539458527]
 script = ExtResource("1_ww0jn")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=378807817]
-scale = Vector2(0.5, 0.5)
+position = Vector2(0, -7.9999995)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_ww0jn")
 hframes = 4
 vframes = 3
@@ -125,7 +126,11 @@ libraries/ = SubResource("AnimationLibrary_ww0jn")
 speed_scale = 0.538
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1790768905]
+position = Vector2(0, -7.9999995)
+scale = Vector2(0.1, 0.1)
+zoom = Vector2(10, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1927757513]
-position = Vector2(-2.5, 0)
+position = Vector2(0, -7.5)
+scale = Vector2(0.25, 0.25)
 shape = SubResource("RectangleShape2D_e5kic")
