@@ -5,6 +5,7 @@ var setting_file = "user://settings.cfg"
 var statistic_file = "user://statistics.cfg"
 var saves = ["user://save_1.cfg", "user://save_2.cfg", "user://save_3.cfg", 
 			"user://save_4.cfg", "user://save_5.cfg", "user://save_6.cfg"]
+const PLAYER_TEMPLATE := preload("res://Gameplay/CRPG/Smiler.tres")
 
 # global variables
 const supported_languages = ["en", "it", "zh", "ja"]
@@ -24,11 +25,12 @@ var rebindable_actions = [
 ]
 var last_scene_path : String = ""
 
-	# system variables
+# system variables
 var using_save : int = -1
 var debug_mode : bool = true
 var player
 
+# VSRG variables
 const PERFECT_WINDOW := 0.035
 const GOOD_WINDOW := 0.075
 const BAD_WINDOW := 0.120
@@ -54,6 +56,7 @@ var save_play_time : float = 0
 var current_play_time : float = 0
 var current_map : String = "res://Maps/Village/Village.tscn"
 var current_combat: String = ""
+var current_player: CRPG_Player
 var player_position_x : float = 0
 var player_position_y : float = 0
 
@@ -142,6 +145,12 @@ func save_statistics():
 	
 	config.save(statistic_file)
 
+
+func new_game():
+	current_player = PLAYER_TEMPLATE.duplicate(true)
+	current_play_time = 0
+	save_play_time = 0
+
 func load_data(save_number: int):
 	using_save = save_number
 	
@@ -153,8 +162,20 @@ func load_data(save_number: int):
 		current_map = config.get_value("save", "map", "")
 		player_position_x = config.get_value("player", "x", 0)
 		player_position_y = config.get_value("player", "y", 0)
+		
+		current_player = PLAYER_TEMPLATE.duplicate(true)
+		current_player.hp = config.get_value("player", "hp", current_player.max_hp)
+		current_player.mana = config.get_value("player", "mana", current_player.max_mana)
+		current_player.atk = config.get_value("player", "atk", current_player.atk)
+		current_player.armor = config.get_value("player", "armor", current_player.armor)
+		current_player.magic = config.get_value("player", "magic", current_player.magic)
+		current_player.magic_resistance = config.get_value("player", "magic_resistance", current_player.magic_resistance)
+		current_player.speed = config.get_value("player", "speed", current_player.speed)
+		current_player.level = config.get_value("player", "level", current_player.level)
+		current_player.experience = config.get_value("player", "experience", current_player.experience)
 	else:
 		print("No save file found, starting fresh")
+		new_game()
 
 func save_data(save_number: int):
 	var config = ConfigFile.new()

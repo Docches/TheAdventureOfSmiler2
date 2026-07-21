@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var animation_player = $Sprite/PlayerAnimation
 
 var movement_enabled = true
-var speed = 300
+var speed = 150
 
 func _ready():
 	add_to_group("player")

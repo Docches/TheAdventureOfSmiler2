@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="CRPG_Foe" format=3 uid="uid://bd1ksp3at0gis"]
 
-[ext_resource type="Script" uid="uid://b86dl5mixdkna" path="res://Entities/CRPG/CRPG_Foe.gd" id="1_5olr4"]
+[ext_resource type="Script" uid="uid://b86dl5mixdkna" path="res://Entities/CRPG/Combatants/CRPG_Combatant .gd" id="1_5olr4"]
+[ext_resource type="Script" uid="uid://x3144srkf72l" path="res://Entities/CRPG/Actions/CRPG_CombatAction.gd" id="1_jbykb"]
 [ext_resource type="SpriteFrames" uid="uid://dtqv0ky44784w" path="res://Art/SpriteFrames/Sage.tres" id="2_jbykb"]
 
 [resource]

@@ -5,6 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iwk8r"]
 
 [node name="CombatTrigger" type="Area2D" unique_id=820557194]
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_1j2ip")
 
 [node name="debug_area_cast" type="ColorRect" parent="." unique_id=231376594]

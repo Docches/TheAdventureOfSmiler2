@@ -128,7 +128,7 @@ speed_scale = 0.538
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1790768905]
 position = Vector2(0, -7.9999995)
 scale = Vector2(0.1, 0.1)
-zoom = Vector2(10, 10)
+zoom = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1927757513]
 position = Vector2(0, -7.5)

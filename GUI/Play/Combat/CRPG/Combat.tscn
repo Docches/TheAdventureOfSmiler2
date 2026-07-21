@@ -31,37 +31,466 @@ grow_vertical = 2
 [node name="Foe1Container" type="Control" parent="CombatSceneContainer/FoesContainer" unique_id=482202226]
 layout_mode = 1
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 60.0
+offset_bottom = 60.0
 
-[node name="Foe1" type="AnimatedSprite2D" parent="CombatSceneContainer/FoesContainer/Foe1Container" unique_id=5666063]
-
-[node name="Foe2Container" type="Control" parent="CombatSceneContainer/FoesContainer" unique_id=1512581005]
+[node name="HBoxContainer" type="HBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe1Container" unique_id=187461420]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Foe2" type="AnimatedSprite2D" parent="CombatSceneContainer/FoesContainer/Foe2Container" unique_id=917198462]
+[node name="VBoxContainer" type="VBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer" unique_id=1907059460]
+layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="Foe3Container" type="Control" parent="CombatSceneContainer/FoesContainer" unique_id=922707921]
+[node name="SelectedIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer" unique_id=1910972621]
+layout_mode = 2
+
+[node name="FoeSprite" type="AnimatedSprite2D" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer" unique_id=5666063]
+
+[node name="DefensiveStatsContainer" type="HBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer" unique_id=1200503853]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HpContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer" unique_id=1825531551]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HpIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/HpContainer" unique_id=1424758707]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HpLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/HpContainer" unique_id=75882817]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArmorContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer" unique_id=1886817385]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ArmorIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/ArmorContainer" unique_id=556786169]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArmorLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/ArmorContainer" unique_id=1012383622]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicResistenceContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer" unique_id=211965641]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MagicResistenceIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/MagicResistenceContainer" unique_id=589133285]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicResistenceLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/MagicResistenceContainer" unique_id=326269556]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OffensiveStatsContainer" type="VBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer" unique_id=687869910]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AttackContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/OffensiveStatsContainer" unique_id=648999404]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttackIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/OffensiveStatsContainer/AttackContainer" unique_id=1041956846]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AttackLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/OffensiveStatsContainer/AttackContainer" unique_id=1789443120]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/OffensiveStatsContainer" unique_id=41190961]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MagicIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/OffensiveStatsContainer/MagicContainer" unique_id=2115777341]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/OffensiveStatsContainer/MagicContainer" unique_id=1576130335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ManaContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/OffensiveStatsContainer" unique_id=1650296818]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ManaIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/OffensiveStatsContainer/ManaContainer" unique_id=1268661545]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ManaLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe1Container/HBoxContainer/OffensiveStatsContainer/ManaContainer" unique_id=571730899]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Foe2Container" type="Control" parent="CombatSceneContainer/FoesContainer" unique_id=1321696175]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -30.0
+offset_top = -29.999996
+offset_right = 30.0
+offset_bottom = 29.999996
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Foe3" type="AnimatedSprite2D" parent="CombatSceneContainer/FoesContainer/Foe3Container" unique_id=1245609792]
+[node name="HBoxContainer" type="HBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe2Container" unique_id=1011106462]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer" unique_id=929518491]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SelectedIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer" unique_id=1791098796]
+layout_mode = 2
+
+[node name="FoeSprite" type="AnimatedSprite2D" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer" unique_id=406820202]
+
+[node name="DefensiveStatsContainer" type="HBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer" unique_id=349622953]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HpContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer" unique_id=51587911]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HpIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/HpContainer" unique_id=1342330122]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HpLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/HpContainer" unique_id=1252015068]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArmorContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer" unique_id=1554833721]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ArmorIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/ArmorContainer" unique_id=1863103493]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArmorLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/ArmorContainer" unique_id=1783870926]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicResistenceContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer" unique_id=446267253]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MagicResistenceIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/MagicResistenceContainer" unique_id=2114184035]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicResistenceLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/MagicResistenceContainer" unique_id=1193048331]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OffensiveStatsContainer" type="VBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer" unique_id=89993893]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AttackContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/OffensiveStatsContainer" unique_id=2095326274]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttackIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/OffensiveStatsContainer/AttackContainer" unique_id=1424522174]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AttackLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/OffensiveStatsContainer/AttackContainer" unique_id=911222489]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/OffensiveStatsContainer" unique_id=1787543899]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MagicIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/OffensiveStatsContainer/MagicContainer" unique_id=1023279798]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/OffensiveStatsContainer/MagicContainer" unique_id=614761728]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ManaContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/OffensiveStatsContainer" unique_id=1476565100]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ManaIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/OffensiveStatsContainer/ManaContainer" unique_id=581815221]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ManaLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe2Container/HBoxContainer/OffensiveStatsContainer/ManaContainer" unique_id=831224626]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Foe3Container" type="Control" parent="CombatSceneContainer/FoesContainer" unique_id=1671491761]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -60.0
+offset_bottom = 60.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe3Container" unique_id=632516614]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer" unique_id=1439031964]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SelectedIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer" unique_id=1801287575]
+layout_mode = 2
+
+[node name="FoeSprite" type="AnimatedSprite2D" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer" unique_id=1140963851]
+
+[node name="DefensiveStatsContainer" type="HBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer" unique_id=476205919]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HpContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer" unique_id=92322427]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HpIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/HpContainer" unique_id=1077734887]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HpLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/HpContainer" unique_id=1826071484]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArmorContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer" unique_id=98017222]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ArmorIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/ArmorContainer" unique_id=2090419616]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArmorLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/ArmorContainer" unique_id=236043899]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicResistenceContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer" unique_id=1929229457]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MagicResistenceIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/MagicResistenceContainer" unique_id=1303255564]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicResistenceLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/VBoxContainer/DefensiveStatsContainer/MagicResistenceContainer" unique_id=795769453]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OffensiveStatsContainer" type="VBoxContainer" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer" unique_id=1888630708]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AttackContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/OffensiveStatsContainer" unique_id=1473442795]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttackIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/OffensiveStatsContainer/AttackContainer" unique_id=1092884878]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AttackLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/OffensiveStatsContainer/AttackContainer" unique_id=1784652885]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/OffensiveStatsContainer" unique_id=617041673]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MagicIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/OffensiveStatsContainer/MagicContainer" unique_id=1714130430]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/OffensiveStatsContainer/MagicContainer" unique_id=22997961]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ManaContainer" type="Control" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/OffensiveStatsContainer" unique_id=616051486]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ManaIcon" type="TextureRect" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/OffensiveStatsContainer/ManaContainer" unique_id=2039406375]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ManaLabel" type="Label" parent="CombatSceneContainer/FoesContainer/Foe3Container/HBoxContainer/OffensiveStatsContainer/ManaContainer" unique_id=266376528]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="CombatActionsContainer" type="Control" parent="." unique_id=552996707]
 layout_mode = 1
@@ -71,7 +500,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CombatActionsContainer" unique_id=991406353]
+[node name="MainContainer" type="HBoxContainer" parent="CombatActionsContainer" unique_id=991406353]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -79,7 +508,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Option1Container" type="MarginContainer" parent="CombatActionsContainer/HBoxContainer" unique_id=2035796209]
+[node name="Option1Container" type="MarginContainer" parent="CombatActionsContainer/MainContainer" unique_id=2035796209]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 15
@@ -87,11 +516,11 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="AttackButton" type="Button" parent="CombatActionsContainer/HBoxContainer/Option1Container" unique_id=42219933]
+[node name="AttackButton" type="Button" parent="CombatActionsContainer/MainContainer/Option1Container" unique_id=42219933]
 layout_mode = 2
 text = "@combat_attack@"
 
-[node name="Option2Container" type="MarginContainer" parent="CombatActionsContainer/HBoxContainer" unique_id=1773406230]
+[node name="Option2Container" type="MarginContainer" parent="CombatActionsContainer/MainContainer" unique_id=1773406230]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 15
@@ -99,11 +528,11 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="SpellsButton" type="Button" parent="CombatActionsContainer/HBoxContainer/Option2Container" unique_id=119131341]
+[node name="SpellsButton" type="Button" parent="CombatActionsContainer/MainContainer/Option2Container" unique_id=119131341]
 layout_mode = 2
 text = "@combat_spells@"
 
-[node name="Option3Container" type="MarginContainer" parent="CombatActionsContainer/HBoxContainer" unique_id=501316274]
+[node name="Option3Container" type="MarginContainer" parent="CombatActionsContainer/MainContainer" unique_id=501316274]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 15
@@ -111,11 +540,11 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="ItemsButton" type="Button" parent="CombatActionsContainer/HBoxContainer/Option3Container" unique_id=1594087834]
+[node name="ItemsButton" type="Button" parent="CombatActionsContainer/MainContainer/Option3Container" unique_id=1594087834]
 layout_mode = 2
 text = "@combat_items@"
 
-[node name="Option4Container" type="MarginContainer" parent="CombatActionsContainer/HBoxContainer" unique_id=1402311428]
+[node name="Option4Container" type="MarginContainer" parent="CombatActionsContainer/MainContainer" unique_id=1402311428]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 15
@@ -123,8 +552,33 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="RunButton" type="Button" parent="CombatActionsContainer/HBoxContainer/Option4Container" unique_id=1069173592]
+[node name="RunButton" type="Button" parent="CombatActionsContainer/MainContainer/Option4Container" unique_id=1069173592]
 layout_mode = 2
 text = "@combat_run@"
+
+[node name="AttackContainer" type="HFlowContainer" parent="CombatActionsContainer" unique_id=773571052]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpellsContainer" type="HFlowContainer" parent="CombatActionsContainer" unique_id=1303593419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemsContainer" type="HFlowContainer" parent="CombatActionsContainer" unique_id=2121967651]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="DialogueBox" parent="." unique_id=746453243 instance=ExtResource("2_pmxpa")]

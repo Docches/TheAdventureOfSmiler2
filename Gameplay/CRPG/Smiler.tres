@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CRPG_Player" format=3 uid="uid://d2hga1iqxewcb"]
+
+[ext_resource type="Script" uid="uid://x3144srkf72l" path="res://Entities/CRPG/Actions/CRPG_CombatAction.gd" id="1_lhoh5"]
+[ext_resource type="Script" uid="uid://co1yeua6m2amo" path="res://Entities/CRPG/Combatants/CRPG_Player.gd" id="2_bvvgu"]
+
+[resource]
+script = ExtResource("2_bvvgu")
+name = "Smiler"
+metadata/_custom_type_script = "uid://co1yeua6m2amo"

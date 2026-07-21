@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://kkeq67qdqfcs" path="res://Entities/CRPG/CRPG_Combat.gd" id="1_nhsn0"]
 [ext_resource type="Script" uid="uid://bsfwlv7ly8j1b" path="res://Entities/CRPG/CRPG_wave.gd" id="2_anfbg"]
-[ext_resource type="Script" uid="uid://b86dl5mixdkna" path="res://Entities/CRPG/CRPG_Foe.gd" id="3_anfbg"]
-[ext_resource type="Resource" uid="uid://bd1ksp3at0gis" path="res://Combats/CRPG/Foes/Sage.tres" id="4_sgxys"]
+[ext_resource type="Script" uid="uid://b86dl5mixdkna" path="res://Entities/CRPG/Combatants/CRPG_Combatant .gd" id="3_anfbg"]
+[ext_resource type="Resource" uid="uid://bd1ksp3at0gis" path="res://Gameplay/CRPG/Foes/Sage.tres" id="4_sgxys"]
 
 [sub_resource type="Resource" id="Resource_uegub"]
 script = ExtResource("2_anfbg")

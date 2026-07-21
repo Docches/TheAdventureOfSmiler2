@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CRPG_CombatAction" format=3 uid="uid://cbxelx2emctks"]
+
+[ext_resource type="Script" uid="uid://x3144srkf72l" path="res://Entities/CRPG/Actions/CRPG_CombatAction.gd" id="1_imwqb"]
+[ext_resource type="Script" uid="uid://bbna6kq04tsgw" path="res://Entities/CRPG/Actions/CRPG_TargetEffects.gd" id="2_a625o"]
+
+[resource]
+script = ExtResource("1_imwqb")
+metadata/_custom_type_script = "uid://x3144srkf72l"

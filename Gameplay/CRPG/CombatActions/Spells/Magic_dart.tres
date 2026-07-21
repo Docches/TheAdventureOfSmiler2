@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CRPG_CombatAction" format=3 uid="uid://6fyfj3kjtq2u"]
+
+[ext_resource type="Script" uid="uid://x3144srkf72l" path="res://Entities/CRPG/Actions/CRPG_CombatAction.gd" id="1_7h581"]
+[ext_resource type="Script" uid="uid://bbna6kq04tsgw" path="res://Entities/CRPG/Actions/CRPG_TargetEffects.gd" id="2_2cjex"]
+[ext_resource type="Script" uid="uid://4txm80nn42jc" path="res://Entities/CRPG/Actions/CRPG_CombatEffect.gd" id="3_mptf1"]
+
+[sub_resource type="Resource" id="Resource_ru5xa"]
+script = ExtResource("3_mptf1")
+effect = 1
+power = 3
+metadata/_custom_type_script = "uid://4txm80nn42jc"
+
+[sub_resource type="Resource" id="Resource_fn62l"]
+script = ExtResource("2_2cjex")
+effects = Array[ExtResource("3_mptf1")]([SubResource("Resource_ru5xa")])
+metadata/_custom_type_script = "uid://bbna6kq04tsgw"
+
+[resource]
+script = ExtResource("1_7h581")
+name = "Magic Dart"
+description = "You create a glowing dart of magical force, which hits a foe of choice."
+mana_cost = 1
+cooldown = 1
+targets_effects = Array[ExtResource("2_2cjex")]([SubResource("Resource_fn62l")])
+metadata/_custom_type_script = "uid://x3144srkf72l"

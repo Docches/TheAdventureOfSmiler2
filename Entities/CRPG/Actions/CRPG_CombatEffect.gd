@@ -1,0 +1,44 @@
+extends Resource
+class_name CRPG_CombatEffect
+
+enum Effect 
+{
+	DAMAGE_PHYSICAL,
+	DAMAGE_MAGICAL,
+	HEAL,
+
+	BUFF_ATK,
+	BUFF_ARMOR,
+	BUFF_MAGIC,
+	BUFF_MAGIC_RESIST,
+	BUFF_SPEED,
+	BUFF_ACCURACY,
+	BUFF_CRIT,
+
+	DEBUFF_ATK,
+	DEBUFF_ARMOR,
+	DEBUFF_MAGIC,
+	DEBUFF_MAGIC_RESIST,
+	DEBUFF_SPEED,
+	DEBUFF_ACCURACY,
+	DEBUFF_CRIT,
+
+	POISON,
+	BURN,
+	FREEZE,
+	PARALYZE,
+	SLEEP,
+	BLEED,
+
+	STUN,
+	SILENCE,
+	CONFUSE,
+
+	RESTORE_MANA,
+	DRAIN_MANA,
+
+	CUSTOM
+}
+
+@export var effect: Effect
+@export var power: int = 0
