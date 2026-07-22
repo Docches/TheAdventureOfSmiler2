@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://kmb6o3v3ior0"]
+
+[ext_resource type="Script" uid="uid://ggj5qhmplmah" path="res://Entities/DoorTrigger/door_trigger.gd" id="1_hwjfd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cve3"]
+
+[node name="DoorTrigger" type="Area2D" unique_id=773511081]
+script = ExtResource("1_hwjfd")
+
+[node name="DebugColor" type="ColorRect" parent="." unique_id=1761376828]
+visible = false
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=927268327]
+shape = SubResource("RectangleShape2D_6cve3")

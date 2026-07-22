@@ -17,6 +17,7 @@ var rebindable_actions = [
 	"move_down",
 	"interact_dialogue",
 	"interact_combat",
+	"interact_door",
 	"lane_0",
 	"lane_1",
 	"lane_2",
@@ -27,7 +28,7 @@ var last_scene_path : String = ""
 
 # system variables
 var using_save : int = -1
-var debug_mode : bool = true
+var debug_mode : bool = false
 var player
 
 # VSRG variables

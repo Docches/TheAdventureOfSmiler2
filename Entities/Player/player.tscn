@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cyj1l5uo24qfv"]
 
 [ext_resource type="Script" uid="uid://cbc16qlipb4bo" path="res://Entities/Player/player.gd" id="1_ww0jn"]
-[ext_resource type="Texture2D" uid="uid://bwpe6udy5ycy3" path="res://Art/sprites/SageSheet.png" id="2_ww0jn"]
+[ext_resource type="Texture2D" uid="uid://b2wo8xnqotgwj" path="res://Art/sprites/SmilerSheet.png" id="2_3uyv8"]
 
 [sub_resource type="Animation" id="Animation_pjt0s"]
 length = 0.001
@@ -108,15 +108,15 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e5kic"]
-size = Vector2(56, 60)
+size = Vector2(56, 56)
 
 [node name="Player" type="CharacterBody2D" unique_id=1539458527]
 script = ExtResource("1_ww0jn")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=378807817]
-position = Vector2(0, -7.9999995)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_ww0jn")
+position = Vector2(0, -7)
+scale = Vector2(0.8800002, 0.88000184)
+texture = ExtResource("2_3uyv8")
 hframes = 4
 vframes = 3
 frame = 3
@@ -129,8 +129,11 @@ speed_scale = 0.538
 position = Vector2(0, -7.9999995)
 scale = Vector2(0.1, 0.1)
 zoom = Vector2(5, 5)
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1927757513]
-position = Vector2(0, -7.5)
+position = Vector2(0, -7)
 scale = Vector2(0.25, 0.25)
 shape = SubResource("RectangleShape2D_e5kic")
